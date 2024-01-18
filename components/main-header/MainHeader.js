@@ -3,10 +3,14 @@ import logoImg from "@/assets/logo.png"
 import classes from "./main-header.module.css"
 import Image from "next/image"
 import MainHeaderBackground from "./main-header-background";
+import NavLink from "../nav-link/nav-link";
+
 const MainHeader = () => {
+
+
     return (
         <>
-            <MainHeaderBackground/>
+            <MainHeaderBackground />
             <header className={classes.header}>
                 <Link className={classes.logo} href={"/"}>
                     <Image src={logoImg} alt="A plate with food on it" priority />
@@ -15,12 +19,12 @@ const MainHeader = () => {
 
                 <nav className={classes.nav}>
                     <ul>
-                        <li>
-                            <Link href={"/meals"}>Browse Meals</Link>
-                        </li>
-                        <li>
-                            <Link href={"/community"}>Foodies Community</Link>
-                        </li>
+                        <NavLink href={"/meals"}>
+                            Browse Meals
+                        </NavLink>
+                        <NavLink href={"/community"}>
+                            Foodies Community
+                        </NavLink>
                     </ul>
                 </nav>
             </header>
