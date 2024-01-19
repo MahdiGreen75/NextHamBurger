@@ -1,9 +1,11 @@
 
 const MealsShare = ({params}) => {
     return (
-        <div>
+        <>
+            <header></header>
+            <main></main>
             <h1>{params.slug}</h1>            
-        </div>
+        </>
     );
 };
 

@@ -5,11 +5,6 @@ import ImageSlideshow from "@/components/images/image-slide-show";
 
 export default function Home() {
   return (
-    // <main>
-    //   <Header></Header>
-    //   <p><Link href={"/about"} className="italic">About</Link></p>
-    //   {/* The above is just a <a> tag */}
-    // </main>
     <>
       <header className={classes.header}>
         <div className={classes.slideshow}>

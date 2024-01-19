@@ -7,7 +7,6 @@ import NavLink from "../nav-link/nav-link";
 
 const MainHeader = () => {
 
-
     return (
         <>
             <MainHeaderBackground />
