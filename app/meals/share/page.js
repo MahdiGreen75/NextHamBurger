@@ -6,19 +6,27 @@
 
     তাই, সার্ভার অ্যাকশন কে সেপারেট ফাইলে রেখে
     "use client" ইউজ করা যাবে।
-*/ 
+*/
 "use client";
-
+// step 1
+import { useFormStatus } from 'react-dom';
 
 import ImagePicker from '@/components/meals/image-picker';
 import classes from './page.module.css';
 import { shareMeal } from '@/lib/actions';
 
 export default function ShareMealPage() {
+    // step 2
+    const {pending} = useFormStatus();
+    /**
+     *  status.pending is true if there 
+     *  is an ongoing request. false otherwise.
+     * 
+     */
 
     // এখানে সার্ভার অ্যাকশন ফাংশন ছিল যেটাকে 
     // একটা আলাদা ফোল্ডারে রাখা হয়েছে।
-    
+
     return (
         <>
             <header className={classes.header}>
@@ -80,7 +88,7 @@ export default function ShareMealPage() {
                     </p>
                     <ImagePicker label={"Your image"} name={"image"} />
                     <p className={classes.actions}>
-                        <button type="submit">Share Meal</button>
+                        <button type="submit" disabled={pending}>{pending ? "Submitting..." : "Share meal"}</button>
                     </p>
                 </form>
             </main>
